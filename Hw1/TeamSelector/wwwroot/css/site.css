@@ -1,0 +1,301 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+ul {
+    list-style: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    margin-top: auto;
+}
+
+/*---Navbar CSS---*/
+.navbarTarget {
+    background-color: #d44211;
+    color: white;
+    border: 5px solid saddlebrown;
+    margin: 20px;
+}
+
+.navbar-brand {
+    color: white !important;
+    padding: 20px;
+}
+
+.nav-item {
+    color: white;
+}
+
+.navbar .nav-link{
+    color: white;
+    background-color: #d44211;
+}
+
+/*---Home Page CSS---*/
+/*---image from https://www.pexels.com/photo/red-leaf-trees-near-the-road-33109 ---*/
+
+#homepage {
+    background-image: url('/images/fall-autumn-red-season.jpg');
+}
+
+#allText {
+    background-color: #e09509;
+    border: 5px solid saddlebrown;
+    margin: auto;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+#appDescript {
+    text-align: left;
+}
+
+#linkBox {
+    color: black;
+    text-decoration: none;
+    background-color: #e09509;
+    padding: 15px 50px;
+    border: 5px solid saddlebrown;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#linkBox:hover {
+    color: brown;
+    background-color: #fae37d;
+    border: 5px solid brown;
+}
+
+#link-row {
+    margin: auto;
+    text-align: center;
+    display: grid;
+}
+
+/*---TeamView CSS---*/
+
+/*------------------------
+    leaf animation credit: https://codepen.io/smhigley/pen/gwYPvR
+    Starts here
+-------------------------*/
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.falling-leaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #db7d09 no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.leaf-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+.leaf-scene div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        background: url("/images/mapleleaf-yellow.png") no-repeat;
+        background-size: contain;
+        transform-style: preserve-3d;
+        backface-visibility: visible;
+}
+/*Ends here*/
+
+#formPage {
+    background-color: #db7d09;
+}
+
+textarea {
+    outline: none;
+    background-color: #fae37d;
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border: 5px solid saddlebrown;
+}
+
+textarea:hover {
+    background-color: #8f1004;
+    color: white;
+}
+
+.inputBox {
+    margin: auto;
+    align-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.inputLabel {
+    background-color: #d44211;
+    border: 5px solid saddlebrown;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+    display: block;
+}
+
+#numBox {
+    margin: auto;
+    align-content: center;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    background-color: #fae37d;
+    border: 5px solid saddlebrown;
+    height: 70px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#numBox:hover {
+    background-color: #8f1004;
+    color: white;
+}
+
+#setTeams {
+    background-color: #d44211;
+    border: 5px solid saddlebrown;
+    color: white;
+    padding: 10px 20px;
+    margin: 40px;
+}
+
+#setTeams:hover {
+    background-color: #8f1004;
+}
+
+/*---TeamDisplayView CSS---*/
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.col-md-6 {
+    padding: 0;
+}
+
+#displayPage {
+    background-color: #ff9933;
+}
+
+#teamCards {
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.teamBox {
+    border: 8px double saddlebrown;
+    margin: 30px;
+    font-family: "Times New Roman", Times, serif;
+    max-width: 700px;
+    width: 100%;
+    background-color: #d44211;
+    align-items: center;
+}
+
+#displayTitle {
+    align-content: center;
+    margin: 0;
+    text-align: center;
+    background-image: url('/images/fall-autumn-red-season.jpg');
+    border: 8px solid saddlebrown;
+    color: white;
+    padding: 30px;
+    width: 100%;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.cardTitles {
+    border-bottom: 5px solid saddlebrown;
+    background-color: #1a3300;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+#namelist {
+    color: white;
+}
+
+#funButton {
+    border: 8px double saddlebrown;
+    border-radius: 12px;
+    margin: 20px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    background: #d44211;
+    color: white;
+}
+
+#funButton:hover {
+    background-color: #ffe066;
+    border: 8px double #d44211;
+    color: black;
+}
+
+/*---PrivacyView CSS*/
+
+#privacyTextbox {
+    background-color: #e09509;
+    border: 5px solid saddlebrown;
+    margin: auto;
+    padding: 15px 30px;
+    text-align: center;
+    max-width: 900px;
+}
+
+img {
+    max-height: 500px;
+    object-fit: contain;
+}
+
+#picBox {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

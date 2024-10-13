@@ -1,0 +1,40 @@
+﻿@model TeamSelector.Models.DisplayTeam
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Display</title>
+</head>
+<body id="displayPage">
+    <div class="container-fluid text-center" id="teamCards">
+        <div class="col-sm-12 container-fluid">
+            <h1 id="displayTitle">Congratulations on <span id="NumOfTeams">@Model.ListOfTeams.Count </span>Teams!</h1>
+        </div>
+
+        <div class="container-fluid text-center">
+            <button id="funButton" onclick="RandomTeamNames()">Fun Team Names!</button>
+        </div>
+
+        <!--Displays the list of teams onto the screen-->
+        @for (int i = 0; i < Model.ListOfTeams.Count; i++)
+
+        {
+            <div class="teamBox col-sm-8 container-fluid">
+                <h2 id="title-@i" class="cardTitles">@Model.ListOfTeams[i].TeamName</h2>
+                <ul id="namelist">
+                    @for (int j = 0; j < Model.ListOfTeams[i].Teammates.Count; j++)
+
+                    {
+                        <li>@Model.ListOfTeams[i].Teammates[j]</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+﻿@model TeamSelector.Models.TeamInputInfo
+@{
+    ViewData["Title"] = "Selection Page";
+}
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Team Selectonator</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/site.css" />
+    </head>
+    <body id="formPage">
+
+        <!--Falling leaf container here-->
+        <div class="falling-leaves"></div>
+
+        <!--Form inputs here-->
+        <div class ="container-fluid text-center">
+            <form asp-action="TeamDisplayView" method="post">
+                <div class=" inputBox col-md-12 container-fluid text-center">
+                    <label class="inputLabel" asp-for="UnformatTeammates">Please list names separated on newlines:</label>
+                    <textarea asp-for="UnformatTeammates" placeholder="Enter teammates names here..."></textarea>
+                    <span asp-validation-for="UnformatTeammates" class="errorMessages"></span>        
+                </div>
+                <br />
+            <div class="inputBox col-sm-6 container-fluid text-center">
+                    <label class="inputLabel" asp-for="NumOfTeammates">How many team members per team?:</label>
+                    <input id="numBox" asp-for="NumOfTeammates" />
+                    <span asp-validation-for="NumOfTeammates" class="errorMessages"></span>
+                </div>
+
+                <button id="setTeams" type="submit">Set Our Teams!</button>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="site.js"></script>
+    </body>
+    </html>
